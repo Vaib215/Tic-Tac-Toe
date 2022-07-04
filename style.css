@@ -1,0 +1,62 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-bg : #EAF6F6;
+    --clr-container-bg : #FFFFFF;
+    --clr-grid-color: #4d9191;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--clr-bg);
+    color: var(--clr-grid-color);
+    font-family: monospace;
+    font-size: 1.1em;
+}
+
+.container {
+    background-color: var(--clr-container-bg);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.game_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: var(--clr-grid-color);
+    width: 28em;
+    height: 28em;
+    grid-gap: 0.25rem;
+    margin: 1em;
+}
+
+.grid_item {
+    background-color: var(--clr-container-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    cursor: pointer;
+    user-select: none;
+}
+
+button {
+    all: unset;
+    padding: 0.25em 0.5em;
+    background-color: var(--clr-grid-color);
+    color: var(--clr-container-bg);
+    width: fit-content;
+    border-radius: 0.1em;
+}
